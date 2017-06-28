@@ -7134,21 +7134,24 @@ body {
   border-left: 1px dotted #fff;
 }
 .sub-nav li a {
-  font-weight: 500;
+  font-weight: 700;
 }
 .sub-nav li a:link {
+  font-weight: 700;
   color: #000;
   text-decoration: none;
 }
 .sub-nav li a:hover {
-  font-weight: 500;
+  font-weight: 700;
   color: #e0e0e0;
   background-color: transparent;
 }
 .sub-nav li a:visited {
+  font-weight: 700;
   color: #e0e0e0;
 }
 .sub-nav li a:active {
+  font-weight: 700;
   color: #000;
 }
 @media (max-width: 768px) {
