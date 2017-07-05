@@ -259,7 +259,7 @@ body {
 }
 
 .banner-phone {
-    .text-shadow();
+    .text-shadow(1px, 1px, 1px, @gray-light);
     .make-sm-column(3);     // 768px (min)
     
     margin-top: 8px;
@@ -289,7 +289,7 @@ body {
         text-align: center;
         font-weight: 800;
         //color: @slate-gray;
-        .text-shadow();
+        .text-shadow(1px, 1px, 1px, @gray-light);
     }
     
     span:nth-child(2) {
@@ -370,22 +370,10 @@ body {
 
 .logo {
     float: left;
-    margin-top: 5px;
-    
-    span.fa.fa-lock {
-        font-size: 40px;
-        margin-right: 10px;
-        color: #fff;
-        
-        @media @phone-min {
-            font-size: 37px;
-            margin-right: 10px;
-        }
-    }
+    margin-top: 2px;
     
     img {
-        //.size(55px, 34px);
-
+        max-height: 46px;
     }
 }
 
@@ -397,53 +385,59 @@ body {
 .subnav-left {
     float: left;
     margin-left: 5px;
-    margin-top: 9px;
+    margin-top: 8px;
     
     @media @phone-min {
-        margin-top: 0;
+        margin-top: 3px;
     }
     
-	
+    a {
+        &:link {
+            text-decoration: none;
+        }
+    }
+    
 	span:first-of-type {
         font-size: 30px;
-		font-weight: 800;
+		font-weight: 400;
         font-family: @font-nunito !important;
         color: @slate-gray;
-        .text-shadow();
+        text-transform: uppercase;
+        .text-shadow(1px, 1px, 2px, @gray-dark);
         
-        @media @phone-min {
-            font-size: 38px;
+        // special case to handle. 320px max (iphone 5)
+        @media @phone-xxxs-max {
+            font-size: 26px;
         }
-        
-	}
-	
-	span:last-of-type {
-        margin-right: 5px;
-        font-size: 25px;
-		font-weight: 400;
-        font-family: @font-quicksand !important;
-        .text-shadow();
         
         @media @phone-min {
             font-size: 33px;
         }
+        
 	}
-
-		a {
-			&:link {
-				color: @white;
-				text-decoration: none;
-			}
-			&:hover {
-				color: @slate-gray;
-			}
-			&:visited {
-				color: @white;
-			}
-			&:active {
-				color: @white;
-			}
-		}
+    
+    span:last-of-type {
+        margin-right: 5px;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: @font-palindrome;
+        color: @white;
+        text-transform: uppercase;
+        .text-shadow(1px, 1px, 2px, @gray-dark);
+        
+        &:hover {
+            color: @slate-gray;
+        }
+        
+        // special case to handle. 320px max (iphone 5)
+        @media @phone-xxxs-max {
+            font-size: 26px;
+        }
+        
+        @media @phone-min {
+            font-size: 33px;
+        }
+    }
     
     .logo-vendors {
         float: right;
@@ -454,10 +448,7 @@ body {
             float: left;
         }
     }
-    
-    .home {
-    
-    }
+
 }
 
 .search-wrapper {
@@ -491,7 +482,13 @@ body {
     font-size: 12px;
 
 	li {
+        border-left: 1px dotted @white;
 		font-family: @font-quicksand;
+        
+        &:hover {
+            background-color: darken(@green, 20%);
+        }
+        
 		a {
             font-weight: 700;
             
@@ -507,7 +504,7 @@ body {
 			}
 			&:visited {
                 font-weight: 700;
-                color: lighten(@gray-light, 5%);
+                color: @gray-light;
 			}
 			&:active {
                 font-weight: 700;
@@ -515,7 +512,6 @@ body {
 			}
 		}
         
-        border-left: 1px dotted @white;
 	}
 
     @media @tablet-max {
@@ -547,12 +543,12 @@ body {
     
     li {
         &:hover {
-            background-color: @gray-dark;
+            background-color: darken(@gray-dark, 8%);
+            border-left: 1px dashed @white;
+            border-right: 1px dashed @white;
             
             a {
                 color: @white;
-                border-left: 1px dashed @white;
-                border-right: 1px dashed @white;
             }
         }
         
@@ -573,7 +569,28 @@ body {
         font-weight: 300;
         text-transform: uppercase;
     }
+    // target the ul with text to main sections and move up so border hover action is even vertically.
+    .navbar-nav:first-child {
+        margin-top: -4px;
+    }
 }
+
+// bootsrrap override
+.navbar-default .navbar-brand {
+    color: @white;
+}
+
+// bootsrrap override
+.navbar-default .navbar-collapse {
+    border-color: @gray-dark;
+}
+
+
+// bootsrrap override
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: @white;
+}
+
 
 .banner-text {
     margin-bottom: 10px;
@@ -1541,6 +1558,22 @@ FOOTER SECTION
 /* Main page wrapper, wrapping h1, pagination and product
 ========================================================================== */
 
+// this is the first element inside the container and before the filter and main product elements
+// Description in the CMS puts a <p> by default. Just need a little space between this element and title.
+
+.container {
+    .entityDescriptionWrapper {
+        margin-bottom: 0;
+        
+        @media @phone-min {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed lighten(@gray-light, 5%);
+            font-weight: 500;
+        }
+    }
+}
+
+
 .guidedNavTwoCol {
     .guidedNavContents {
         width: 100% !important;
@@ -1897,7 +1930,7 @@ td.guidedNavProductCell:hover {
 /* each section of checkout details - give it a margin and divide section with dotted bottom border
 except for the last div.
  */
-// MAIN COLUMN SELECTOR ON LEFT
+// MAIN COLUMN SELECTOR ON LEFT (inside col-md-8 js-checkout-update-container)
 .checkout-details{
     &> div {
         border-bottom: 1px dashed @gray-superlight;
@@ -1912,7 +1945,7 @@ except for the last div.
 }
 
 /* order details on right */
-// MAIN COLUMN SELECTOR ON RIGHT
+// MAIN COLUMN SELECTOR ON RIGHT (inside col-md-4)
 .order-details {
 
 }
