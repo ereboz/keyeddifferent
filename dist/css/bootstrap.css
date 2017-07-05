@@ -7059,28 +7059,25 @@ body {
 }
 .subnav-left span:last-of-type {
   margin-right: 5px;
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 1px 1px 1px #b5b5b5;
+  color: #fff;
+  text-shadow: 1px 1px 2px #353535;
+  text-transform: uppercase;
+}
+.subnav-left span:last-of-type:hover {
+  color: #444f45;
+}
+@media (max-width: 320px) {
+  .subnav-left span:last-of-type {
+    font-size: 26px;
+  }
 }
 @media (min-width: 480px) {
   .subnav-left span:last-of-type {
     font-size: 33px;
   }
-}
-.subnav-left a:link {
-  color: #fff;
-  text-decoration: none;
-}
-.subnav-left a:hover {
-  color: #444f45;
-}
-.subnav-left a:visited {
-  color: #fff;
-}
-.subnav-left a:active {
-  color: #fff;
 }
 .subnav-left .logo-vendors {
   float: right;
@@ -7134,6 +7131,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   border-left: 1px dotted #fff;
 }
+.sub-nav li:hover {
+  background-color: #a8b123;
+}
 .sub-nav li a {
   font-weight: 700;
 }
@@ -7149,7 +7149,7 @@ body {
 }
 .sub-nav li a:visited {
   font-weight: 700;
-  color: #e0e0e0;
+  color: #d3d3d3;
 }
 .sub-nav li a:active {
   font-weight: 700;
@@ -7185,12 +7185,12 @@ body {
   background-color: #353535;
 }
 .main-nav li:hover {
-  background-color: #353535;
+  background-color: #494949;
+  border-right: 1px dashed #fff;
+  border-left: 1px dashed #fff;
 }
 .main-nav li:hover a {
   color: #fff;
-  border-right: 1px dashed #fff;
-  border-left: 1px dashed #fff;
 }
 .main-nav li a {
   color: #fff !important;
@@ -7203,6 +7203,18 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
+}
+#myNavbar .navbar-nav:first-child {
+  margin-top: -4px;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-collapse {
+  border-color: #353535;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
 }
 .banner-text {
   margin-bottom: 10px;
@@ -8140,6 +8152,16 @@ FOOTER SECTION
 }
 /* Main page wrapper, wrapping h1, pagination and product
 ========================================================================== */
+.container .entityDescriptionWrapper {
+  margin-bottom: 0;
+}
+@media (min-width: 480px) {
+  .container .entityDescriptionWrapper {
+    margin-bottom: 20px;
+    font-weight: 500;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+}
 .guidedNavTwoCol .guidedNavContents {
   width: 100% !important;
 }
