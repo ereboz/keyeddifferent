@@ -7256,11 +7256,11 @@ body {
   }
 }
 #myCarousel .carousel-inner .item {
-  background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
+  background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
 }
 @media (min-width: 1200px) {
   #myCarousel .carousel-inner .item.slide1 {
-    background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
+    background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
   }
   #myCarousel .carousel-inner .item.slide2 {
     background-image: url("/skins/skin_10/dist/images/bg-slide2.jpg");
@@ -7726,7 +7726,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 }
 .item-desc-wrapper .item-models {
   letter-spacing: 1px;
-  word-spacing: 12px;
+  word-spacing: 17px;
 }
 @media (min-width: 768px) {
   .item-desc-wrapper .item-models {
@@ -7737,7 +7737,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 @media (min-width: 992px) {
   .item-desc-wrapper .item-models {
     letter-spacing: 1px;
-    word-spacing: 6px;
+    word-spacing: 14px;
   }
 }
 .item-desc-wrapper .item-desc .price-hpi {

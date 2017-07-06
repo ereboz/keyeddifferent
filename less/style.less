@@ -215,10 +215,6 @@ unpolluted with (col-md-4 col-lg-6, etc.)
     background-clip: padding-box;
 }
 
-
-
-
-
 /* PAGE OVERRIDES
 ========================================================================== */
 
@@ -226,12 +222,6 @@ body {
     font-family: @font-quicksand !important;
     //font-family: @font-src-sans !important;
 }
-// Define width of container for keyedalike specific wrapper
-//@media (min-width: 1200px) {
-//    .container {
-//        width: 1012px;
-//    }
-//}
 
 .btn {
     color: @black;
@@ -637,36 +627,42 @@ body {
     }
 
   .carousel-inner {
-
+// http://localhost:63342/keyeddifferent/dist/images
+// /skins/skin_10/dist/images
       .item {
           // default background for all but desktop large. desktop large has individual images.
-          background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
-          
+          background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
+          //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1-1.jpg");
+
           // individual backgrounds per slide (large desktop only)
           @media @desktop-large-min {
-              
+
               &.slide1 {
-                  background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
+                  background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
+                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1-1.jpg");
               }
-    
+
               &.slide2 {
                   background-image: url("/skins/skin_10/dist/images/bg-slide2.jpg");
+                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
               }
-    
+
               &.slide3 {
                   background-image: url("/skins/skin_10/dist/images/bg-slide3.jpg");
+                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
               }
-    
+
               &.slide4 {
                   background-image: url("/skins/skin_10/dist/images/bg-slide4.jpg");
+                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide4.jpg");
               }
           }
-    
+
           img {
               display: block;
               max-width: 100%;
               height: auto;
-        
+
               @media @tablet-max {
                   max-width: 50%;
               }
@@ -1074,7 +1070,7 @@ popular-items {
     text-align: center;
     
     .item-models {
-        word-spacing: 12px;
+        word-spacing: 17px;
         letter-spacing: 1px;
         
         @media @tablet-min {
@@ -1083,7 +1079,7 @@ popular-items {
         }
         
         @media @desktop-min {
-            word-spacing: 6px;
+            word-spacing: 14px;
             letter-spacing: 1px;
         }
     }
