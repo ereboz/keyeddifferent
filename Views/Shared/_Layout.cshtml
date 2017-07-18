@@ -43,7 +43,9 @@
         <div class="row subnavall">
             <div class="subnav-elements">                               <!-- col's defined in less -->
                 <div class="logo">
-                    <img class="img-responsive" src="/skins/skin_20/dist/images/logo-sm.png">
+                    <a class="home" href="/">
+                    	<img class="img-responsive" src="/skins/skin_20/dist/images/logo-sm.png">
+                    </a>
                 </div>
                 <div class="subnav-left">
                     <a href="/">
@@ -53,13 +55,17 @@
                         </span>
                     </a>
                     <div class="logo-vendors hidden-xs hidden-sm hidden-md">
-                        <img src="/skins/skin_20/dist/images/logo-masterlock.png" />
-                        <img src="/skins/skin_20/dist/images/logo-american-lock.png" />
+                            <a href="https://www.keyeddifferent.com/manufacturer/1/master-lock">
+                        	    <img src="/skins/skin_20/dist/images/logo-masterlock.png" />
+                            </a>
+                            <a href="https://www.keyeddifferent.com/manufacturer/2/american-lock">
+                        	    <img src="/skins/skin_20/dist/images/logo-american-lock.png" />
+                            </a>
                     </div>
                 </div>
             </div>
 
-            <div class="search-wrapper hidden-xs">                      <!-- col's defined in less -->
+            <div class="search-wrapper">                      <!-- col's defined in less -->
                 <div class="search">
                  	@Html.Partial("_Search")
                 </div>
@@ -153,10 +159,11 @@
             <div class="info-footer footer1">
 
                 <div class="padlock-pros">
-                    <a href="http://keyedalike.com">
-                        <img class="logo img-responsive" src="/skins/skin_20/dist/images/logo-padlock-pros.png"/>
-                        <div class="logo-link-text"><a href="http://keyeddifferent.com">keyeddifferent.com</a></div>
+                    <a href="/">
+                        <img class="logo img-responsive" src="/skins/skin_20/dist/images/logo-padlock-pros.png" />
                     </a>
+                    <div class="logo-link-text"><a href="/">KeyedDifferent.com</a></div>
+                    
                 </div>
                 <div class="contact">
                     <h1>1-800-778-2217</h1>
@@ -165,8 +172,8 @@
                 </div>
                 <div class="logo-affiliates">
                     <img class="better-business" src="/images/assets/BBB.png" width="125px"/>
-                    <a href="/t-secure.aspx">
-                        <img class="secure" src="/images/assets/HPI_Secure.png" width="125px"/>
+                    <a href="/topic/secure">
+                        <img class="secure" src="/images/assets/HPI_Secure.png" width="125px" />
                     </a>
                     <img class="credit-cards" src="/images/assets/CreditCards.png" width="175px"/>
                     <img class="paypal" src="/images/assets/Paypal.jpg" width="75px"/>
@@ -191,6 +198,7 @@
                         <li><a href="@Url.BuildTopicLink("Shipping")">Shipping Information</a></li>
                         <li><a href="@Url.BuildTopicLink("Returns")">Return Policy</a></li>
                         <li><a href="@Url.Action("Index", "ContactUs")">Feedback</a></li>
+                        <li><a href="@Url.Action("Index", "Sitemap")">Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="content-right">
