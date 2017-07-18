@@ -1085,7 +1085,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #353535;
+  color: #7b7b7b;
   background-color: #fff;
 }
 input,
@@ -1562,7 +1562,7 @@ pre {
   margin: 0 0 10px;
   font-size: 13px;
   line-height: 1.42857143;
-  color: #353535;
+  color: #7b7b7b;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
@@ -2501,7 +2501,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #353535;
+  color: #7b7b7b;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2934,7 +2934,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #757575;
+  color: #bbb;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3593,12 +3593,12 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #353535;
+  color: #7b7b7b;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #282828;
+  color: #6e6e6e;
   text-decoration: none;
   background-color: #f5f5f5;
 }
@@ -5072,7 +5072,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #353535;
+  color: #7b7b7b;
 }
 .alert {
   padding: 15px;
@@ -5745,7 +5745,7 @@ button.list-group-item-danger.active:focus {
   border-color: #ddd;
 }
 .panel-default > .panel-heading {
-  color: #353535;
+  color: #7b7b7b;
   background-color: #f5f5f5;
   border-color: #ddd;
 }
@@ -5754,7 +5754,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading .badge {
   color: #f5f5f5;
-  background-color: #353535;
+  background-color: #7b7b7b;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ddd;
@@ -6880,6 +6880,13 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 ========================================================================== */
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
+@font-face {
+  font-family: 'mokimono';
+  font-style: normal;
+  font-weight: normal;
+
+  src: url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'), url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff') format('woff'), url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+}
 /* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
 /* MIXIN'S
@@ -6915,7 +6922,7 @@ body {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: 8px;
+  margin-top: 20px;
   color: #444f45;
   text-shadow: 1px 1px 1px #d3d3d3;
 }
@@ -6927,10 +6934,17 @@ body {
 }
 .banner-phone .phone-icon {
   margin: 0 10px 0 0;
+  font-size: 16px;
 }
 .banner-phone .banner-phone-text {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+}
+.banner-phone .banner-phone-text .phone-text {
+  color: #ca2626;
+}
+.banner-phone .banner-phone-text .phone-number {
+  color: #000;
 }
 .banner-phone .free-shipping {
   text-transform: none;
@@ -7028,61 +7042,78 @@ body {
 }
 .subnav-left {
   float: left;
-  margin-top: 8px;
+  margin-top: 5px;
   margin-left: 5px;
+}
+@media (max-width: 320px) {
+  .subnav-left {
+    margin-top: 15px;
+  }
+}
+.subnav-left .home {
+  display: inline;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .subnav-left .home {
+    display: inline-block;
+    margin-top: 6px;
+  }
 }
 @media (min-width: 480px) {
   .subnav-left {
-    margin-top: 3px;
+    margin-top: 10px;
   }
 }
 .subnav-left a:link {
   text-decoration: none;
 }
-.subnav-left span:first-of-type {
-  font-family: 'Nunito Sans', sans-serif !important;
-  font-size: 30px;
+.subnav-left span.keyed {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 23px;
   font-weight: 400;
   color: #444f45;
-  text-shadow: 1px 1px 2px #353535;
+  text-shadow: 1px 1px 2px #7b7b7b;
   text-transform: uppercase;
 }
 @media (max-width: 320px) {
-  .subnav-left span:first-of-type {
-    font-size: 26px;
+  .subnav-left span.keyed {
+    font-size: 18px;
   }
 }
-@media (min-width: 480px) {
-  .subnav-left span:first-of-type {
-    font-size: 33px;
+@media (min-width: 992px) {
+  .subnav-left span.keyed {
+    font-size: 24px;
   }
 }
-.subnav-left span:last-of-type {
-  margin-right: 5px;
+.subnav-left span.differentdotcom {
+  display: inline-block;
+}
+.subnav-left span.differentdotcom:hover {
+  color: #444f45;
+}
+.subnav-left span.different {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 400;
   color: #fff;
-  text-shadow: 1px 1px 2px #353535;
+  text-shadow: 1px 1px 2px #7b7b7b;
   text-transform: uppercase;
 }
-.subnav-left span:last-of-type:hover {
-  color: #444f45;
-}
 @media (max-width: 320px) {
-  .subnav-left span:last-of-type {
-    font-size: 26px;
+  .subnav-left span.different {
+    font-size: 18px;
   }
 }
-@media (min-width: 480px) {
-  .subnav-left span:last-of-type {
-    font-size: 33px;
+@media (min-width: 992px) {
+  .subnav-left span.different {
+    font-size: 24px;
   }
 }
 .subnav-left .logo-vendors {
   float: right;
-  margin-top: 11px;
-  margin-left: 30px;
+  margin-top: 3px;
+  margin-left: 15px;
 }
 .subnav-left .logo-vendors img {
   float: left;
@@ -7182,10 +7213,10 @@ body {
   margin-right: -15px;
   margin-bottom: 0;
   margin-left: -15px;
-  background-color: #353535;
+  background-color: #7b7b7b;
 }
 .main-nav li:hover {
-  background-color: #494949;
+  background-color: #8f8f8f;
   border-right: 1px dashed #fff;
   border-left: 1px dashed #fff;
 }
@@ -7211,7 +7242,7 @@ body {
   color: #fff;
 }
 .navbar-default .navbar-collapse {
-  border-color: #353535;
+  border-color: #7b7b7b;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;

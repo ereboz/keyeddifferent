@@ -408,25 +408,10 @@ body {
 .subnav-left {
     float: left;
     margin-left: 5px;
-    margin-top: 5px;
-    
-    // special case to handle. 320px max (iphone 5)
-    @media @phone-xxxs-max {
-        margin-top: 15px;
-    }
-    
-    .home {
-        display: inline;
-        margin-top: 0;
-        
-        @media @tablet-min {
-            display: inline-block;
-            margin-top: 6px;
-        }
-    }
+    margin-top: 8px;
     
     @media @phone-min {
-        margin-top: 10px;
+        margin-top: 3px;
     }
     
     a {
@@ -435,7 +420,7 @@ body {
         }
     }
     
-	span.keyed {
+	span.combo {
         font-size: 23px;
 		font-weight: 400;
         font-family: @font-nunito;
@@ -453,14 +438,14 @@ body {
         }
 	}
 	
-    span.differentdotcom {
+    span.lockdotcom {
         display: inline-block;
         &:hover {
             color: @slate-gray;
         }
     }
     
-	span.different {
+	span.lock, span.com {
         //margin-right: 5px;
         font-size: 23px;
 		font-weight: 400;
@@ -469,26 +454,30 @@ body {
         text-transform: uppercase;
         .text-shadow(1px, 1px, 2px, @gray-dark);
         
+        &:hover {
+            color: @slate-gray;
+        }
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
-            font-size: 18px;
+            font-size: 26px;
         }
         
-        @media @desktop-min {
-            font-size: 24px;
+        @media @phone-min {
+            font-size: 33px;
         }
-	}
+    }
     
     .logo-vendors {
         float: right;
-        margin-left: 15px;
-        margin-top: 3px;
+        margin-left: 30px;
+        margin-top: 11px;
         
         img {
             float: left;
         }
     }
+
 }
 
 .search-wrapper {
