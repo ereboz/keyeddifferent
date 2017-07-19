@@ -250,6 +250,15 @@ body {
     background-color: @light-gray3;
 }
 
+// *Important* This adds a little space above the notice class on all pages to seperate the notices from search (mobile)
+.notices {
+    margin-top: 45px;
+    
+    @media @tablet-min {
+        margin-top: 0;
+    }
+}
+
 .bg-banner {
     .size(100%, 50px);
     margin: -5px 0 0 0;
@@ -386,7 +395,7 @@ body {
         height: 50px;
         background-color: @gold;
         //background-image: url("http://localhost:63342/combolock/dist/images/bg-banner.jpg");
-        //background-image: url("/skins/skin_19/dist/images/bg-banner.jpg");
+        //background-image: url("/skins/skin_20/dist/images/bg-banner.jpg");
         
     }
 }
@@ -497,6 +506,8 @@ body {
     .make-md-column(3);     // 992px (min)
     
     margin-top: 7px;
+    width: 100%;
+    padding: 0 !important;
 }
 
 // start server side generated
@@ -520,7 +531,8 @@ body {
 
 .sub-nav {
     font-size: 12px;
-
+    max-height: 50px;
+    
 	li {
         border-left: 1px dotted @white;
 		font-family: @font-quicksand;
@@ -567,7 +579,7 @@ body {
     margin-bottom: -45px;
     
     @media @tablet-min {
-        margin-bottom: 45px;
+        margin-bottom: 0;
     }
     
     @media @desktop-min {
@@ -617,7 +629,13 @@ body {
 
 // bootsrrap override
 .navbar-default .navbar-brand {
-    color: @white;
+    
+    a {
+        &:link {
+            color: @white;
+            text-decoration: none;
+        }
+    }
 }
 
 // bootsrrap override
@@ -638,23 +656,38 @@ body {
 }
 
 // Carousel
+// mobile: display none, tablet display without controlls and indicators (due to image leaves no room for them) desktop display everything
+
 
 #myCarousel {
+    display: none;
+    margin-bottom: 45px;
     
-    // custom setting for iphone 5 to hide
-    @media @phone-xxxs-max {
-        display: none;
+    @media @tablet-min {
+        display: block;
     }
     
-    margin-bottom: 25px;
-    border: 1px dotted @gray-medium;
-    background-color: #d3d3d3;
+    // Start Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
+    //&.carousel-fade {
+    //    .item {
+    //        opacity: 0;
+    //        transition-property: opacity;
+    //    }
+    //
+    //    .active {
+    //        opacity: 1;
+    //    }
+    //}
+    // End Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
     
     .carousel-indicators {
         display: none;
         
         @media @tablet-min {
             display: block;
+            bottom: -20%;
+            left: 65%;
+            width: 30%;
         
             .active {
                 background-color: @gray-medium;
@@ -663,103 +696,89 @@ body {
                 border: 1px solid @gray-medium;
             }
         }
+        
+        @media @desktop-min {
+            bottom: -10%;
+        }
+    }
+    
+    .carousel-control.left, .carousel-control.right {
+        background-image: none;
+    }
+    
+    .carousel-control {
+        display: none;
+        
+        @media @tablet-min {
+            display: block;
+            top: -100%;
+        }
+        
+        @media @desktop-min {
+            top: 32%;
+        }
+    }
+    
+    
+    a.left {
+        left: -10%;
+        
+        @media @desktop-min {
+            left: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
+    }
+    
+    a.right {
+        right: -10%;
+        
+        @media @desktop-min {
+            right: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
     }
 
-  .carousel-inner {
-// http://localhost:63342/keyeddifferent/dist/images
-// /skins/skin_10/dist/images
-      .item {
-          // default background for all but desktop large. desktop large has individual images.
-          background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
-          //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1-1.jpg");
+}
 
-          // individual backgrounds per slide (large desktop only)
-          @media @desktop-large-min {
+// start carousel fade
 
-              &.slide1 {
-                  background-image: url("/skins/skin_10/dist/images/bg-slide1-1.jpg");
-                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1-1.jpg");
-              }
-
-              &.slide2 {
-                  background-image: url("/skins/skin_10/dist/images/bg-slide2.jpg");
-                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
-              }
-
-              &.slide3 {
-                  background-image: url("/skins/skin_10/dist/images/bg-slide3.jpg");
-                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
-              }
-
-              &.slide4 {
-                  background-image: url("/skins/skin_10/dist/images/bg-slide4.jpg");
-                  //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide4.jpg");
-              }
-          }
-
-          img {
-              display: block;
-              max-width: 100%;
-              height: auto;
-
-              @media @tablet-max {
-                  max-width: 50%;
-              }
-          }
-
-      }
-  }
-
-  .carousel-caption {
-      width: 48%;
-      top: -20%;
-      left: 45%;
-      color: @black;
-      font-family: @font-subnav;
-      text-shadow: none;
-      
-      @media @phone-min {
-          top: -8%;
-      }
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+        
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+        
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
     
-      @media @desktop-min {
-          top: 0;
-          left: 35%;
-      }
-      // just display text shadow for large desktop. doesnt look good at lower levels.
-      @media @desktop-large-min {
-          .text-shadow();
-      }
-
-      h1 {
-          color: @blue;
-          font-size: 16px;
-          text-align: left;
-          margin-bottom: 20px;
-
-          @media @phone-min {  // was @screen-tablet
-			  font-size: 35px;
-          }
-      }
-
-      p {
-          font-size: 9px;
-          text-align: left;
-          margin: 0;
-
-          @media @phone-min {  // was @screen-tablet
-              font-size: 20px;
-              line-height: 30px;
-          }
-
-      }
-  }
-
+    .carousel-control {
+        z-index: 2;
+    }
 }
+// end carousel fade
 
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}
 
 
 span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
@@ -785,11 +804,20 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 // End Carousel
 
 .wrapper-category {
-    .element {
-        .make-sm-column(4);     // 768px (min)
+    
+    margin-bottom: 0;
+    @media @tablet-min {
+        margin-bottom: 60px;
     }
     
-    margin-bottom: 40px;
+    .element {
+        
+        @media @phone-xxs-max {
+            margin-bottom: 10px;
+        }
+        
+        .make-sm-column(4);     // 768px (min)
+    }
 }
 
 .category {
@@ -804,7 +832,11 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
 // Product Slider (Best Sellers Section)
 .product-slider-wrapper {
-    margin-bottom: 50px;
+    margin: 35px auto 50px auto;
+    
+    @media @tablet-min {
+        margin-top: 0;
+    }
 }
 
 .product-slider-head {
@@ -860,10 +892,20 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 }
 
 .carousel-inner.best-sellers {
+    .make-xs-column(12);     // 480px
     .make-md-column(12);     // 992px (min)
     
     .element {
+        .make-xs-column(12);    // 480px
         .make-sm-column(3);     // 768px (min)
+    }
+}
+
+.best-sellers {
+    margin-bottom: 20px;
+    
+    .element {
+        margin-bottom: 20px;
     }
 }
 
@@ -874,7 +916,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
     .product-image {
         margin: 0 auto;
-        .size(166px, 166px);
+        .size(160px, 160px);
       }
 
     .product-sale {
@@ -1315,6 +1357,11 @@ FOOTER SECTION
 	&.footer2 {
 		margin-right: 0;
 		margin-top: 0;
+        line-height: 2;
+        
+        @media @phone-min {
+            line-height: normal;
+        }
 		
 		.content-left {
 			float: left;
@@ -1323,6 +1370,16 @@ FOOTER SECTION
 		.content-right {
 			float: right;
 			margin-bottom: 20px;
+            
+            // fix for 320px to fit in viewport nicely
+            &:last-child {
+                width: auto;
+                
+                @media @phone-xxxs-max {
+                    width: 137px;
+                }
+            }
+            
 		}
 		
         @media @desktop-min {
@@ -1343,7 +1400,7 @@ FOOTER SECTION
 			
 			li {
 				&.fa {
-					margin: 0 6px;
+                    margin: 0 10px 0 6px;
 				}
 			}
 		}
@@ -1365,6 +1422,13 @@ FOOTER SECTION
 		
 		.input-group-addon-captchaimage {
 			padding: 0;
+            
+            // special case scenario for <=320px to wrap the captcha image below the text box
+            // in order to display characters that otherwise would be hidden.
+            @media @phone-xxxs-max {
+                display: inline-block;
+            }
+            
 		}
 		
 		.page-action-bar {
@@ -1414,6 +1478,22 @@ FOOTER SECTION
     .text-box {
         width: 25%;
     }
+    
+    // override .text-option from above.
+    textarea {
+        &#TextOption {
+            width: 62%;
+            
+            @media @tablet-min {
+                width: 48%;
+            }
+            
+            @media @desktop-min {
+                width: 40%;
+            }
+        }
+    }
+    
 }
 
 .variant-info-wrap .variant-price .price-wrap {
@@ -1422,6 +1502,8 @@ FOOTER SECTION
     color: #888;
     font-weight: normal;
 }
+
+
 
 .add-to-cart-group {
     .add-to-cart-quantity {
@@ -1487,11 +1569,15 @@ FOOTER SECTION
     }
 }
 
-.hpi-add-to-cart-submit-wrapper {
-    width: 100%;
-    float: left;
-    margin-bottom: 20px;
-}
+// applies to View/ShoppingCart/AddToCartForm.cshtml to move button below field
+// this is commented out in AddtoCartForm.cshtml. It was not submittable on phone view and microsoft udate wiped the
+// code. if we want to apply, might need to add through javaScript.
+
+//.hpi-add-to-cart-submit-wrapper {
+//    width: 100%;
+//    float: left;
+//    margin-bottom: 20px;
+//}
 
 .btn.add-to-cart {
     color: @white !important;
@@ -1819,6 +1905,19 @@ span.pageHeadingWrap {
     }
 }
 
+
+/* Forms (global)
+========================================================================== */
+
+form .has-error {
+    color: @red;
+}
+
+.notices {
+    text-align: center;
+    color: red;
+}
+
 /* Products (category page)
 ========================================================================== */
 
@@ -1933,6 +2032,13 @@ td.guidedNavProductCell:hover {
 
 /* globals affecting everything
 ========================================================================== */
+
+// empty checkout (nothing in cart)
+.shopping-cart-page {
+    &.empty-shopping-cart {
+        margin-bottom: 20px;
+    }
+}
 
 // checkout page order summary wrapper
 
@@ -2318,6 +2424,11 @@ h3.checkout-header i.checkout-status{
     
     .input-group-addon-captchaimage {
         padding: 0;
+        
+        @media @phone-xxxs-max {
+            display: inline-block;
+        }
+        
     }
     
 }
@@ -2533,6 +2644,16 @@ p {
 
 /* Order History
 ========================================================================== */
+
+
+/* Create Account Page
+========================================================================== */
+
+.account-create-page {
+    .create-account-actions {
+        margin-bottom: 20px;
+    }
+}
 
 
 
