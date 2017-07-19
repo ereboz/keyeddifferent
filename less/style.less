@@ -537,7 +537,7 @@ body {
     
 	li {
         border-left: 1px dotted @white;
-		font-family: @font-roboto;
+		font-family: @font-roboto !important;
         
         &:hover {
             background-color: darken(@gold, 10%);
@@ -826,6 +826,10 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
     border: 1px solid @light-gray1;
     margin: 5px auto;
     .box-shadow(2px 2px 5px @gray-light);
+    
+    &:hover {
+        border: 1px solid @black;
+    }
 
     @media @phone-max {
         .size(65%, auto);

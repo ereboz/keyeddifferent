@@ -7173,7 +7173,7 @@ body {
   font-size: 12px;
 }
 .sub-nav li {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto Condensed", sans-serif !important;
   border-left: 1px dotted #fff;
 }
 .sub-nav li:hover {
@@ -7414,6 +7414,9 @@ span.glyphicon.glyphicon-chevron-left {
 
       -ms-box-shadow: 2px 2px 5px #d3d3d3;
        -o-box-shadow: 2px 2px 5px #d3d3d3;
+}
+.category:hover {
+  border: 1px solid #000;
 }
 @media (max-width: 480px) {
   .category {
