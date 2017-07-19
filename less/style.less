@@ -401,10 +401,10 @@ body {
 
 .logo {
     float: left;
-    margin-top: 2px;
+    margin-top: 5px;
     
     img {
-        max-height: 46px;
+        max-height: 40px;
     }
 }
 
@@ -443,50 +443,53 @@ body {
         }
     }
     
-	span.keyed {
-        font-size: 23px;
-		font-weight: 400;
-        font-family: @font-roboto;
-        color: @slate-gray;
-        text-transform: uppercase;
-        .text-shadow(1px, 1px, 2px, @gray-dark);
+    .domain-wrapper {
+        float: left;
+        margin-top: 0;
         
-        // special case to handle. 320px max (iphone 5)
-        @media @phone-xxxs-max {
-            font-size: 18px;
+        @media @tablet-min {
+            margin-top: -5px;
         }
         
-        @media @desktop-min {
-            font-size: 24px;
-        }
-	}
-	
-    span.differentdotcom {
-        display: inline-block;
-        &:hover {
+        .domain-1 {
+            font-size: 28px;
+            font-weight: 400;
+            font-family: @font-roboto;
             color: @slate-gray;
+            text-transform: uppercase;
+            .text-shadow(1px, 1px, 2px, @gray-dark);
+        
+            // special case to handle. 320px max (iphone 5)
+            @media @phone-xxxs-max {
+                font-size: 18px;
+            }
+        
+            @media @tablet-min {
+                font-size: 30px;
+            }
+        }
+    
+        .domain-2 {
+            //margin-right: 5px;
+            font-size: 28px;
+            font-weight: 400;
+            font-family: @font-roboto;
+            color: @white;
+            text-transform: uppercase;
+            .text-shadow(1px, 1px, 2px, @gray-dark);
+        
+        
+            // special case to handle. 320px max (iphone 5)
+            @media @phone-xxxs-max {
+                font-size: 18px;
+            }
+        
+            @media @tablet-min {
+                font-size: 30px;
+            }
         }
     }
-    
-	span.different {
-        //margin-right: 5px;
-        font-size: 23px;
-		font-weight: 400;
-        font-family: @font-roboto;
-        color: @white;
-        text-transform: uppercase;
-        .text-shadow(1px, 1px, 2px, @gray-dark);
-        
-        
-        // special case to handle. 320px max (iphone 5)
-        @media @phone-xxxs-max {
-            font-size: 18px;
-        }
-        
-        @media @desktop-min {
-            font-size: 24px;
-        }
-	}
+
     
     .logo-vendors {
         float: right;
@@ -534,7 +537,7 @@ body {
     
 	li {
         border-left: 1px dotted @white;
-		font-family: @font-quicksand;
+		font-family: @font-roboto;
         
         &:hover {
             background-color: darken(@gold, 10%);
@@ -856,13 +859,13 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 // Product Slider - product (slides)
 .product-wrapper {
     border: 1px solid @light-gray1;
-    .border-radius();
     background: @white;
+    .border-radius();
 
     &.listing {
         border: none;
-        .border-radius(0);
         border-bottom: 2px solid @light-gray1;
+        .border-radius(0);
 
         &:hover {
             border-bottom: 2px solid @black;
