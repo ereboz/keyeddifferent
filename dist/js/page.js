@@ -1,9 +1,6 @@
 /**
- * Created by javaBoxer on 7/23/2017.
+ * Created by javaBoxer on 7/17/2017
  */
-
-
-
 
 $(document).ready(function(){
     
@@ -57,9 +54,7 @@ $(document).ready(function(){
     
 });
 
-/**
- * Created by javaBoxer on 5/5/2017.
- */
+
 
 $(window).load(function() {
     var loc = window.location.href.toLowerCase();
@@ -84,8 +79,8 @@ $(window).load(function() {
     // if on homepage, and viewport <= 600, find (.best-seller .item) within a .carousel. if not active (2nd item) add
     // .active class. This will display both rows (all 6 products) for mobilel
     
-    // if (locPath != "/") {              // local (there is something in the path. toggle to show effects)
-    if (locPath === "/") {              // server (nothing in the path)
+    if (locPath != "/") {              // local (there is something in the path. toggle to show effects)
+    // if (localPath === "/") {              // server (nothing in the path)
         pageWrapper = $(".carousel");
         
         if (viewportWidth <= 600) {
@@ -97,9 +92,9 @@ $(window).load(function() {
             // move .wrapper-category (3 links to keyedalike.com, keyeddifferent.com and buildalock.com)
             // under the best sellers for handheld mobile
             var banners = ('.wrapper-category');
-            var bestSellers = ('.product-slider-wrapper');
+            var popularItems = ('.popular-items.last');
             
-            $(banners).detach().appendTo(bestSellers);
+            $(banners).detach().appendTo(popularItems);
             
         }
     }
