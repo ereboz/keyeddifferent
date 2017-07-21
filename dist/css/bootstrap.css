@@ -7789,6 +7789,16 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 .item-image-wrapper .item-title .construction-type {
   font-size: 24px;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  .item-image-wrapper .item-title .construction-type {
+    min-height: 68px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .item-image-wrapper .item-title .item-width {
+    min-height: 40px;
+  }
+}
 .item-image-wrapper .item-images {
   margin-bottom: 5px;
 }
@@ -7837,6 +7847,11 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 @media (min-width: 992px) {
   .item-desc-wrapper .item-desc .price-hpi {
     word-spacing: 24px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .item-desc-wrapper .item-desc .price-hpi {
+    min-height: 40px;
   }
 }
 .item-desc-wrapper .item-desc .price-msrp {
