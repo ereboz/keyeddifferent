@@ -7267,12 +7267,13 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 #myCarousel {
-  display: none;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
+  background-color: #d3d3d3;
+  border: 1px dotted #7b7a7a;
 }
-@media (min-width: 768px) {
+@media (max-width: 320px) {
   #myCarousel {
-    display: block;
+    display: none;
   }
 }
 #myCarousel .carousel-indicators {
@@ -7280,10 +7281,7 @@ body {
 }
 @media (min-width: 768px) {
   #myCarousel .carousel-indicators {
-    bottom: -20%;
-    left: 65%;
     display: block;
-    width: 30%;
   }
   #myCarousel .carousel-indicators .active {
     background-color: #7b7a7a;
@@ -7292,47 +7290,77 @@ body {
     border: 1px solid #7b7a7a;
   }
 }
-@media (min-width: 992px) {
-  #myCarousel .carousel-indicators {
-    bottom: -10%;
+#myCarousel .carousel-inner .item {
+  background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+}
+@media (min-width: 1200px) {
+  #myCarousel .carousel-inner .item.slide1 {
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+  }
+  #myCarousel .carousel-inner .item.slide2 {
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
+  }
+  #myCarousel .carousel-inner .item.slide3 {
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
+  }
+  #myCarousel .carousel-inner .item.slide4 {
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide4.jpg");
   }
 }
-#myCarousel .carousel-control.left,
-#myCarousel .carousel-control.right {
-  background-image: none;
+#myCarousel .carousel-inner .item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-#myCarousel .carousel-control {
-  display: none;
+@media (max-width: 768px) {
+  #myCarousel .carousel-inner .item img {
+    max-width: 50%;
+  }
 }
-@media (min-width: 768px) {
-  #myCarousel .carousel-control {
-    top: -100%;
-    display: block;
+#myCarousel .carousel-caption {
+  top: -20%;
+  left: 45%;
+  width: 48%;
+  font-family: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+  color: #000;
+  text-shadow: none;
+}
+@media (min-width: 480px) {
+  #myCarousel .carousel-caption {
+    top: -8%;
   }
 }
 @media (min-width: 992px) {
-  #myCarousel .carousel-control {
-    top: 32%;
+  #myCarousel .carousel-caption {
+    top: 0;
+    left: 35%;
   }
 }
-#myCarousel a.left {
-  left: -10%;
-}
-@media (min-width: 992px) {
-  #myCarousel a.left {
-    left: -4%;
-    width: 4%;
-    height: 5%;
+@media (min-width: 1200px) {
+  #myCarousel .carousel-caption {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
   }
 }
-#myCarousel a.right {
-  right: -10%;
+#myCarousel .carousel-caption h1 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #29abe2;
+  text-align: left;
 }
-@media (min-width: 992px) {
-  #myCarousel a.right {
-    right: -4%;
-    width: 4%;
-    height: 5%;
+@media (min-width: 480px) {
+  #myCarousel .carousel-caption h1 {
+    font-size: 35px;
+  }
+}
+#myCarousel .carousel-caption p {
+  margin: 0;
+  font-size: 9px;
+  text-align: left;
+}
+@media (min-width: 480px) {
+  #myCarousel .carousel-caption p {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 .carousel-fade .carousel-inner .item {

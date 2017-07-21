@@ -656,40 +656,26 @@ body {
     margin-bottom: 40px;
 }
 
-// Carousel
-// mobile: display none, tablet display without controlls and indicators (due to image leaves no room for them) desktop display everything
+// start myCarousel from keyedalike.com
 
 
 #myCarousel {
-    display: none;
-    margin-bottom: 45px;
     
-    @media @tablet-min {
-        display: block;
+    // custom setting for iphone 5 to hide
+    @media (max-width: @screen-xxxs) {
+        display: none;
     }
     
-    // Start Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
-    //&.carousel-fade {
-    //    .item {
-    //        opacity: 0;
-    //        transition-property: opacity;
-    //    }
-    //
-    //    .active {
-    //        opacity: 1;
-    //    }
-    //}
-    // End Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
+    margin-bottom: 25px;
+    border: 1px dotted @gray-medium;
+    background-color: #d3d3d3;
     
     .carousel-indicators {
         display: none;
         
-        @media @tablet-min {
+        @media (min-width: @screen-tablet) {
             display: block;
-            bottom: -20%;
-            left: 65%;
-            width: 30%;
-        
+            
             .active {
                 background-color: @gray-medium;
             }
@@ -697,53 +683,185 @@ body {
                 border: 1px solid @gray-medium;
             }
         }
+    }
+    
+    .carousel-inner {
         
-        @media @desktop-min {
-            bottom: -10%;
+        .item {
+            // default background for all but desktop large. desktop large has individual images.
+            background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+            
+            // individual backgrounds per slide (large desktop only)
+            @media (min-width: @screen-lg-desktop) {
+                
+                &.slide1 {
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+                }
+                
+                &.slide2 {
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
+                }
+                
+                &.slide3 {
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
+                }
+                
+                &.slide4 {
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide4.jpg");
+                }
+            }
+            
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                
+                @media (max-width: @screen-tablet) {
+                    max-width: 50%;
+                }
+            }
+            
         }
     }
     
-    .carousel-control.left, .carousel-control.right {
-        background-image: none;
-    }
-    
-    .carousel-control {
-        display: none;
+    .carousel-caption {
+        width: 48%;
+        top: -20%;
+        left: 45%;
+        color: @black;
+        font-family: @font-subnav;
+        text-shadow: none;
         
-        @media @tablet-min {
-            display: block;
-            top: -100%;
+        @media (min-width: @screen-xs) {  // was @screen-tablet
+            top: -8%;
         }
         
-        @media @desktop-min {
-            top: 32%;
+        @media (min-width: @screen-desktop) {
+            top: 0;
+            left: 35%;
         }
-    }
-    
-    
-    a.left {
-        left: -10%;
+        // just display text shadow for large desktop. doesnt look good at lower levels.
+        @media (min-width: @screen-lg-desktop) {
+            text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        }
         
-        @media @desktop-min {
-            left: -4%;
-            width: 4%;
-            height: 5%;
+        h1 {
+            color: @blue;
+            font-size: 16px;
+            text-align: left;
+            margin-bottom: 20px;
+            
+            @media (min-width: @screen-xs) {  // was @screen-tablet
+                font-size: 35px;
+            }
         }
-
+        
+        p {
+            font-size: 9px;
+            text-align: left;
+            margin: 0;
+            
+            @media (min-width: @screen-xs) {  // was @screen-tablet
+                font-size: 20px;
+                line-height: 30px;
+            }
+            
+        }
     }
     
-    a.right {
-        right: -10%;
-        
-        @media @desktop-min {
-            right: -4%;
-            width: 4%;
-            height: 5%;
-        }
-
-    }
-
 }
+
+// end myCarousel from keyedalike.com
+
+
+// Carousel
+// mobile: display none, tablet display without controlls and indicators (due to image leaves no room for them) desktop display everything
+
+
+//#myCarousel {
+//    display: none;
+//    margin-bottom: 45px;
+//    
+//    @media @tablet-min {
+//        display: block;
+//    }
+//    
+//    // Start Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
+//    //&.carousel-fade {
+//    //    .item {
+//    //        opacity: 0;
+//    //        transition-property: opacity;
+//    //    }
+//    //
+//    //    .active {
+//    //        opacity: 1;
+//    //    }
+//    //}
+//    // End Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
+//    
+//    .carousel-indicators {
+//        display: none;
+//        
+//        @media @tablet-min {
+//            display: block;
+//            bottom: -20%;
+//            left: 65%;
+//            width: 30%;
+//        
+//            .active {
+//                background-color: @gray-medium;
+//            }
+//            li {
+//                border: 1px solid @gray-medium;
+//            }
+//        }
+//        
+//        @media @desktop-min {
+//            bottom: -10%;
+//        }
+//    }
+//    
+//    .carousel-control.left, .carousel-control.right {
+//        background-image: none;
+//    }
+//    
+//    .carousel-control {
+//        display: none;
+//        
+//        @media @tablet-min {
+//            display: block;
+//            top: -100%;
+//        }
+//        
+//        @media @desktop-min {
+//            top: 32%;
+//        }
+//    }
+//    
+//    
+//    a.left {
+//        left: -10%;
+//        
+//        @media @desktop-min {
+//            left: -4%;
+//            width: 4%;
+//            height: 5%;
+//        }
+//
+//    }
+//    
+//    a.right {
+//        right: -10%;
+//        
+//        @media @desktop-min {
+//            right: -4%;
+//            width: 4%;
+//            height: 5%;
+//        }
+//
+//    }
+//
+//}
 
 // start carousel fade
 
