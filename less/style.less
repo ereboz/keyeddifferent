@@ -1069,13 +1069,43 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
         }
     }
     
-    .details a.view-details {
+    .details {
         .btn-view-details();
         display: block;
         position: relative;
         float: left;
         .size(60%, 45px);
+    
+        a {
+            display: inline-block;
+            margin-top: -6px;
+            
+            @media @desktop-min {
+                margin-top: 0;
+            }
+        
+            &:link {
+                color: @black;
+                text-decoration: none;
+            }
+            &:hover {
+                color: @white;
+                background-color: transparent;
+            }
+            &:visited {
+                color: @gray-light;
+            }
+            &:active {
+                color: @black;
+            }
+        }
+        
     }
+    
+        
+
+        
+    
     
     .saleOnly {
         margin-top: 8px;
