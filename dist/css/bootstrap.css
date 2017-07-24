@@ -6880,13 +6880,6 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 ========================================================================== */
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
-@font-face {
-  font-family: 'mokimono';
-  font-style: normal;
-  font-weight: normal;
-
-  src: url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'), url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff') format('woff'), url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
-}
 /* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
 /* MIXIN'S
@@ -7292,20 +7285,20 @@ body {
   }
 }
 #myCarousel .carousel-inner .item {
-  background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+  background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
 }
 @media (min-width: 1200px) {
   #myCarousel .carousel-inner .item.slide1 {
-    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
+    background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
   }
   #myCarousel .carousel-inner .item.slide2 {
-    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
+    background-image: url("/skins/skin_20/dist/images/bg-slide2.jpg");
   }
   #myCarousel .carousel-inner .item.slide3 {
-    background-image: url("/skins/skin_20/dist/images/bg-slide3.jpg");
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
   }
   #myCarousel .carousel-inner .item.slide4 {
-    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide4.jpg");
+    background-image: url("/skins/skin_20/dist/images/bg-slide4.jpg");
   }
 }
 #myCarousel .carousel-inner .item img {
