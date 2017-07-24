@@ -7245,7 +7245,7 @@ body {
   clear: left;
 }
 #myNavbar ul li {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -7552,6 +7552,10 @@ span.glyphicon.glyphicon-chevron-left {
 .best-sellers .element {
   margin-bottom: 20px;
 }
+.product-wrapper {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px !important;
+}
 .product-image-bg {
   width: 90%;
   margin: 10px auto;
@@ -7758,11 +7762,6 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 .product-footer-wrapper .saleOnly {
   display: inline-block;
   margin-top: 8px;
-}
-.product-desc-wrapper,
-.product-footer-wrapper {
-  font-family: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
-  font-size: 13px;
 }
 .prod-plp {
   position: relative;
