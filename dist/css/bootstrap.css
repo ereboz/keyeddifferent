@@ -7284,9 +7284,6 @@ body {
     border: 1px solid #7b7a7a;
   }
 }
-#myCarousel .carousel-inner .item {
-  background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
-}
 @media (min-width: 1200px) {
   #myCarousel .carousel-inner .item.slide1 {
     background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
@@ -7295,10 +7292,7 @@ body {
     background-image: url("/skins/skin_20/dist/images/bg-slide2.jpg");
   }
   #myCarousel .carousel-inner .item.slide3 {
-    background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
-  }
-  #myCarousel .carousel-inner .item.slide4 {
-    background-image: url("/skins/skin_20/dist/images/bg-slide4.jpg");
+    background-image: url("/skins/skin_20/dist/images/bg-slide3.jpg");
   }
 }
 #myCarousel .carousel-inner .item img {
