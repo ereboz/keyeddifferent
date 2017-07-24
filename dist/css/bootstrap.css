@@ -7246,6 +7246,7 @@ body {
 }
 #myNavbar ul li {
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
   font-weight: 300;
   text-transform: uppercase;
 }
