@@ -442,7 +442,7 @@ body {
                 font-size: 18px;
             }
         
-            @media @tablet-min {
+            @media @desktop-min {
                 font-size: 30px;
             }
         }
@@ -461,7 +461,7 @@ body {
                 font-size: 18px;
             }
         
-            @media @tablet-min {
+            @media @desktop-min {
                 font-size: 30px;
             }
         }
@@ -561,7 +561,7 @@ body {
         margin-bottom: 0;
     }
     
-    @media @desktop-min {
+    @media @tablet-min {
         margin-bottom: 20px;
     }
 }
@@ -636,7 +636,6 @@ body {
 }
 
 // start myCarousel from keyedalike.com
-
 
 #myCarousel {
     
@@ -756,92 +755,81 @@ body {
 // Carousel
 // mobile: display none, tablet display without controlls and indicators (due to image leaves no room for them) desktop display everything
 
+// todo: bh  fade from combolock.com assist
+// START EXPERIMENTAL CONTROL PALCEMENT
+#myCarousel {
+    display: none;
+    margin-bottom: 45px;
 
-//#myCarousel {
-//    display: none;
-//    margin-bottom: 45px;
-//    
-//    @media @tablet-min {
-//        display: block;
-//    }
-//    
-//    // Start Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
-//    //&.carousel-fade {
-//    //    .item {
-//    //        opacity: 0;
-//    //        transition-property: opacity;
-//    //    }
-//    //
-//    //    .active {
-//    //        opacity: 1;
-//    //    }
-//    //}
-//    // End Carousel Fade - #myCarousel - Override default action of slide in favor of fade.
-//    
-//    .carousel-indicators {
-//        display: none;
-//        
-//        @media @tablet-min {
-//            display: block;
-//            bottom: -20%;
-//            left: 65%;
-//            width: 30%;
-//        
-//            .active {
-//                background-color: @gray-medium;
-//            }
-//            li {
-//                border: 1px solid @gray-medium;
-//            }
-//        }
-//        
-//        @media @desktop-min {
-//            bottom: -10%;
-//        }
-//    }
-//    
-//    .carousel-control.left, .carousel-control.right {
-//        background-image: none;
-//    }
-//    
-//    .carousel-control {
-//        display: none;
-//        
-//        @media @tablet-min {
-//            display: block;
-//            top: -100%;
-//        }
-//        
-//        @media @desktop-min {
-//            top: 32%;
-//        }
-//    }
-//    
-//    
-//    a.left {
-//        left: -10%;
-//        
-//        @media @desktop-min {
-//            left: -4%;
-//            width: 4%;
-//            height: 5%;
-//        }
-//
-//    }
-//    
-//    a.right {
-//        right: -10%;
-//        
-//        @media @desktop-min {
-//            right: -4%;
-//            width: 4%;
-//            height: 5%;
-//        }
-//
-//    }
-//
-//}
+    @media @tablet-min {
+        display: block;
+    }
 
+    .carousel-indicators {
+        display: none;
+
+        @media @tablet-min {
+            display: block;
+            bottom: -20%;
+            left: 65%;
+            width: 30%;
+
+            .active {
+                background-color: @gray-medium;
+            }
+            li {
+                border: 1px solid @gray-medium;
+            }
+        }
+
+        @media @desktop-min {
+            bottom: -10%;
+        }
+    }
+
+    .carousel-control.left, .carousel-control.right {
+        background-image: none;
+    }
+
+    .carousel-control {
+        display: none;
+
+        @media @tablet-min {
+            display: block;
+            top: -100%;
+        }
+
+        @media @desktop-min {
+            top: 32%;
+        }
+    }
+
+
+    a.left {
+        left: -10%;
+
+        @media @desktop-min {
+            left: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
+    }
+
+    a.right {
+        right: -10%;
+
+        @media @desktop-min {
+            right: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
+    }
+
+}
+
+// END EXPERIMENTAL CONTROL PALCEMENT
 // start carousel fade
 
 .carousel-fade {

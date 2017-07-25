@@ -7091,7 +7091,7 @@ body {
     font-size: 18px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .subnav-left .domain-wrapper .domain-1 {
     font-size: 30px;
   }
@@ -7109,7 +7109,7 @@ body {
     font-size: 18px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .subnav-left .domain-wrapper .domain-2 {
     font-size: 30px;
   }
@@ -7211,7 +7211,7 @@ body {
     margin-bottom: 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar {
     margin-bottom: 20px;
   }
@@ -7349,6 +7349,75 @@ body {
   #myCarousel .carousel-caption p {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+#myCarousel {
+  display: none;
+  margin-bottom: 45px;
+}
+@media (min-width: 768px) {
+  #myCarousel {
+    display: block;
+  }
+}
+#myCarousel .carousel-indicators {
+  display: none;
+}
+@media (min-width: 768px) {
+  #myCarousel .carousel-indicators {
+    bottom: -20%;
+    left: 65%;
+    display: block;
+    width: 30%;
+  }
+  #myCarousel .carousel-indicators .active {
+    background-color: #7b7a7a;
+  }
+  #myCarousel .carousel-indicators li {
+    border: 1px solid #7b7a7a;
+  }
+}
+@media (min-width: 992px) {
+  #myCarousel .carousel-indicators {
+    bottom: -10%;
+  }
+}
+#myCarousel .carousel-control.left,
+#myCarousel .carousel-control.right {
+  background-image: none;
+}
+#myCarousel .carousel-control {
+  display: none;
+}
+@media (min-width: 768px) {
+  #myCarousel .carousel-control {
+    top: -100%;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  #myCarousel .carousel-control {
+    top: 32%;
+  }
+}
+#myCarousel a.left {
+  left: -10%;
+}
+@media (min-width: 992px) {
+  #myCarousel a.left {
+    left: -4%;
+    width: 4%;
+    height: 5%;
+  }
+}
+#myCarousel a.right {
+  right: -10%;
+}
+@media (min-width: 992px) {
+  #myCarousel a.right {
+    right: -4%;
+    width: 4%;
+    height: 5%;
   }
 }
 .carousel-fade .carousel-inner .item {
