@@ -7208,11 +7208,6 @@ body {
 }
 @media (min-width: 768px) {
   .navbar {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 768px) {
-  .navbar {
     margin-bottom: 20px;
   }
 }
@@ -7262,7 +7257,6 @@ body {
 }
 #myCarousel {
   margin-bottom: 25px;
-  background-color: #d3d3d3;
   border: 1px dotted #7b7a7a;
 }
 @media (max-width: 320px) {
@@ -7283,6 +7277,9 @@ body {
   #myCarousel .carousel-indicators li {
     border: 1px solid #7b7a7a;
   }
+}
+#myCarousel .carousel-inner .item {
+  background-image: url("/skins/skin_20/dist/images/bg-slide-blank.jpg");
 }
 @media (min-width: 1200px) {
   #myCarousel .carousel-inner .item.slide1 {
@@ -7401,7 +7398,7 @@ body {
   }
 }
 #myCarousel a.left {
-  left: -10%;
+  left: -12%;
 }
 @media (min-width: 992px) {
   #myCarousel a.left {
@@ -7411,7 +7408,7 @@ body {
   }
 }
 #myCarousel a.right {
-  right: -10%;
+  right: -12%;
 }
 @media (min-width: 992px) {
   #myCarousel a.right {
