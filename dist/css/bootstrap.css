@@ -7019,6 +7019,7 @@ body {
 .wrapper-subnav .subnavall {
   height: 50px;
   background-color: #ccd631;
+  background-image: url("/skins/skin_20/dist/images/bg-banner.jpg");
 }
 .logo {
   float: left;
@@ -7756,7 +7757,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
   float: left;
   width: 40%;
   height: 45px;
-  padding: 5px;
+  padding: 2px;
   text-align: center;
   border-right: 1px solid #e0e0e0;
 }
@@ -7804,7 +7805,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
   text-decoration: none;
 }
 .product-footer-wrapper .details a:hover {
-  color: #fff;
+  color: #fff !important;
   background-color: transparent;
 }
 .product-footer-wrapper .details a:visited {
