@@ -7122,6 +7122,9 @@ body {
 .subnav-left .logo-vendors img {
   float: left;
 }
+.subnav-left .logo-vendors img[src*="masterlock"] {
+  margin-right: 10px;
+}
 .search-wrapper {
   position: relative;
   width: 100%;
