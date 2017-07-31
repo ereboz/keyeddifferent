@@ -1826,15 +1826,19 @@ FOOTER SECTION
             
             @media @tablet-min {
                 width: 60% !important;
-                //margin-top: 10px !important;
             }
         }
         
         &:last-child {
             width: 60% !important;
+            margin-top: 10px;
             
             @media @tablet-min {
                 width: 40% !important;
+            }
+            
+            @media @desktop-min {
+                margin-top: 0;
             }
         }
     }
@@ -1868,12 +1872,10 @@ select#SelectSortTop {
     float: left;
 }
 
-/* space between sort by and products per page */
+/* space between sort by wrapper and products per page wrapper */
 div#catSortByTop {
-    margin-right: 20px;
-    margin-left: 10px;
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 20px 10px 10px;
     
     @media @tablet-min {
         width: 40%;

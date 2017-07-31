@@ -8389,10 +8389,16 @@ FOOTER SECTION
 }
 .entityPageSortWrap .col-md-6:last-child {
   width: 60% !important;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .entityPageSortWrap .col-md-6:last-child {
     width: 40% !important;
+  }
+}
+@media (min-width: 992px) {
+  .entityPageSortWrap .col-md-6:last-child {
+    margin-top: 0;
   }
 }
 .entityPageSortWrap .paging {
@@ -8417,12 +8423,10 @@ FOOTER SECTION
 .catSortBy {
   float: left;
 }
-/* space between sort by and products per page */
+/* space between sort by wrapper and products per page wrapper */
 div#catSortByTop {
   width: 100%;
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin: 10px 20px 10px 10px;
 }
 @media (min-width: 768px) {
   div#catSortByTop {
