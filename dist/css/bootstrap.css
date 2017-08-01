@@ -9292,11 +9292,16 @@ Topic pages for Shipping, Return Policy, Privacy, Terms and Conditions, etc.
 @media (min-width: 768px) {
   .policy .helper-content,
   .topic .helper-content {
-    float: left;
     margin-top: 20px;
     clear: none;
     border-top: none;
     border-left: 1px dotted #e6e8ea;
+  }
+}
+@media (min-width: 992px) {
+  .policy .helper-content,
+  .topic .helper-content {
+    float: left;
   }
 }
 .policy .helper-content .call-us-wrapper,
