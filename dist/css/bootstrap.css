@@ -6942,7 +6942,7 @@ body {
   font-weight: bold;
 }
 .banner-phone .banner-phone-text .phone-text {
-  color: #ca2626;
+  color: #f00;
 }
 .banner-phone .banner-phone-text .phone-number {
   color: #000;
@@ -8525,7 +8525,7 @@ span.pageHeadingWrap {
 /* Forms (global)
 ========================================================================== */
 form .has-error {
-  color: #ca2626;
+  color: #f00;
 }
 .notices {
   color: red;
@@ -8571,6 +8571,13 @@ form .has-error {
     -ms-flex-preferred-size: auto;
             flex-basis: auto;
   }
+  #ProductTable td.guidedNavProductCell .guidedNavNameWrap {
+    margin-bottom: 10px;
+  }
+  #ProductTable td.guidedNavProductCell .guidedNavPriceWrap .price-wrap .regular-price {
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
 }
 /* some space between the rows */
 td.guidedNavProductCell {
@@ -8579,9 +8586,24 @@ td.guidedNavProductCell {
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  td.guidedNavProductCell {
-    padding-right: 0;
+  td.guidedNavProductCell .guidedNavNameWrap {
+    margin: 0 auto 10px auto;
   }
+}
+@media (min-width: 992px) {
+  td.guidedNavProductCell .guidedNavNameWrap {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  td.guidedNavProductCell .guidedNavPriceWrap .price-wrap .regular-price {
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+}
+td.guidedNavProductCell .guidedNavPriceWrap .price-wrap .sale-price {
+  font-weight: bold;
+  color: #f00;
 }
 td.guidedNavProductCell:hover {
   border-bottom: 2px solid #000;

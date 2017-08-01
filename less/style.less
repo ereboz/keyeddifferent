@@ -58,7 +58,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 @gray-light: #d3d3d3;
 @slate-gray: #444f45;
 @gray-dark: #7b7b7b;
-@red: #ca2626;
+@red: #ff0000;
 @light-gray1: #e0e0e0;
 @light-gray2: #f8f8f8;
 @light-gray3: #f3f5f6;
@@ -2037,6 +2037,19 @@ form .has-error {
         flex-basis: auto;
         padding-top: 0;
         margin-bottom: 20px;
+        
+        .guidedNavNameWrap {
+            margin-bottom: 10px;
+        }
+    
+        .guidedNavPriceWrap {
+            .price-wrap {
+                .regular-price {
+                    margin-bottom: 2px;
+                    font-size: 13px;
+                }
+            }
+        }
     }
 }
 
@@ -2049,8 +2062,37 @@ td.guidedNavProductCell {
     padding-top: 30px;
     
     @media @tablet-min {
-        padding-right: 0;
+    
     }
+    
+    .guidedNavNameWrap {
+        
+        @media @tablet-min {
+            margin: 0 auto 10px auto;
+        }
+        
+        @media @desktop-min {
+            width: 80%;
+        }
+    }
+    
+    .guidedNavPriceWrap {
+        .price-wrap {
+            
+            .regular-price {
+                @media @tablet-min {
+                    margin-bottom: 2px;
+                    font-size: 13px;
+                }
+            }
+            
+            .sale-price {
+                font-weight: bold;
+                color: @red;
+            }
+        }
+    }
+
 }
 
 // give the user a hover indicator of the product about to be selected
