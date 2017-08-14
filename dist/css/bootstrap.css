@@ -8703,6 +8703,11 @@ except for the last div.
 h3.checkout-header i.checkout-status {
   display: none;
 }
+/* Shopping Cart (single error messages)
+========================================================================== */
+.field-validation-error {
+  color: #f00;
+}
 /* Shopping Cart (left column)
 ========================================================================== */
 .checkout-details {
