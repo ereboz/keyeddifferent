@@ -7791,8 +7791,8 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
           transition: all .2s ease-in-out;
 }
 .product-footer-wrapper .details a.view-details:hover {
-  color: #fff;
-  background-color: #29abe2;
+  color: #000;
+  background-color: #ccd631;
 }
 .product-footer-wrapper .saleOnly {
   display: inline-block;
