@@ -8653,6 +8653,9 @@ td.guidedNavProductCell:hover {
 ========================================================================== */
 /* globals affecting everything
 ========================================================================== */
+.checkout-page .field-validation-error {
+  color: #f00;
+}
 .shopping-cart-page.empty-shopping-cart {
   margin-bottom: 20px;
 }
@@ -8702,11 +8705,6 @@ except for the last div.
 /* the pencil can be hidden */
 h3.checkout-header i.checkout-status {
   display: none;
-}
-/* Shopping Cart (single error messages)
-========================================================================== */
-.field-validation-error {
-  color: #f00;
 }
 /* Shopping Cart (left column)
 ========================================================================== */

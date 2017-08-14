@@ -2169,6 +2169,13 @@ td.guidedNavProductCell:hover {
 /* globals affecting everything
 ========================================================================== */
 
+.checkout-page {
+    .field-validation-error {
+        color: @red;
+    }
+}
+
+
 // empty checkout (nothing in cart)
 .shopping-cart-page {
     &.empty-shopping-cart {
@@ -2255,15 +2262,6 @@ except for the last div.
 h3.checkout-header i.checkout-status{
     display: none;
 }
-
-
-
-/* Shopping Cart (single error messages)
-========================================================================== */
-.field-validation-error {
-    color: @red;
-}
-
 
 /* Shopping Cart (left column)
 ========================================================================== */
