@@ -354,7 +354,7 @@ body {
         height: 50px;
         background-color: @gold;
         //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-banner.jpg");
-        background-image: url("/skins/skin_20/dist/images/bg-banner.jpg");
+        background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-banner.jpg");
     }
 }
 
@@ -657,28 +657,53 @@ body {
     }
     
     .carousel-inner {
+            //background-image: linear-gradient(to bottom right,#000,#bfb8b0);
         
         .item {
+            height: 350px;  // temp-carousel
             // default background for all but desktop large. desktop large has individual images.
             //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide-blank.jpg");
-            background-image: url("/skins/skin_20/dist/images/bg-slide-blank.jpg");
+            //background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1.jpg");
             
             // individual backgrounds per slide (large desktop only)
-            @media @desktop-large-min {
+            @media @tablet-min {
                 
                 &.slide1 {
                     //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide1.jpg");
-                    background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
+                    //background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1.jpg");
+                    //background-position: right top;
+                    //background-repeat: no-repeat;
+    
+                    background: linear-gradient(to bottom right,#000,#bfb8b0);
+
+                    
+                    //&:before {
+                    //    content: '';
+                    //    position: absolute;
+                    //    top: 0;
+                    //    right: 0;
+                    //    bottom: 0;
+                    //    left: 0;
+                    //    background-image: linear-gradient(to bottom right,#000,#bfb8b0);
+                    //    opacity: .6;
+                    //}
+                    
                 }
                 
                 &.slide2 {
                     //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide2.jpg");
-                    background-image: url("/skins/skin_20/dist/images/bg-slide2.jpg");
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1-background.jpg");
+                    background-size: contain;
+                    
+                    @media @tablet-max {
+                        background-size: cover;
+                        max-height: 221px;
+                    }
                 }
                 
                 &.slide3 {
                     //background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-slide3.jpg");
-                    background-image: url("/skins/skin_20/dist/images/bg-slide3.jpg");
+                    background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1.jpg");
                 }
             }
             
@@ -688,7 +713,7 @@ body {
                 height: auto;
                 
                 @media (max-width: @screen-tablet) {
-                    max-width: 50%;
+                    //max-width: 50%;
                 }
             }
             
@@ -708,7 +733,7 @@ body {
         
         @media (min-width: @screen-desktop) {
             top: 0;
-            left: 35%;
+            left: 0;
         }
         // just display text shadow for large desktop. doesnt look good at lower levels.
         @media (min-width: @screen-lg-desktop) {

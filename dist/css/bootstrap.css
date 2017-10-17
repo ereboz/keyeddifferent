@@ -7019,7 +7019,7 @@ body {
 .wrapper-subnav .subnavall {
   height: 50px;
   background-color: #ccd631;
-  background-image: url("/skins/skin_20/dist/images/bg-banner.jpg");
+  background-image: url("http://localhost:63342/keyeddifferent/dist/images/bg-banner.jpg");
 }
 .logo {
   float: left;
@@ -7309,17 +7309,29 @@ body {
   }
 }
 #myCarousel .carousel-inner .item {
-  background-image: url("/skins/skin_20/dist/images/bg-slide-blank.jpg");
+  height: 350px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   #myCarousel .carousel-inner .item.slide1 {
-    background-image: url("/skins/skin_20/dist/images/bg-slide1.jpg");
+    background: -webkit-gradient(linear, left top, right bottom, from(#000), to(#bfb8b0));
+    background: -webkit-linear-gradient(top left, #000, #bfb8b0);
+    background:      -o-linear-gradient(top left, #000, #bfb8b0);
+    background:         linear-gradient(to bottom right, #000, #bfb8b0);
   }
   #myCarousel .carousel-inner .item.slide2 {
-    background-image: url("/skins/skin_20/dist/images/bg-slide2.jpg");
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1-background.jpg");
+    -webkit-background-size: contain;
+            background-size: contain;
   }
   #myCarousel .carousel-inner .item.slide3 {
-    background-image: url("/skins/skin_20/dist/images/bg-slide3.jpg");
+    background-image: url("http://localhost:63342/keyeddifferent/dist/images/temp-bg-slide1.jpg");
+  }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  #myCarousel .carousel-inner .item.slide2 {
+    max-height: 221px;
+    -webkit-background-size: cover;
+            background-size: cover;
   }
 }
 #myCarousel .carousel-inner .item img {
@@ -7328,9 +7340,6 @@ body {
   height: auto;
 }
 @media (max-width: 768px) {
-  #myCarousel .carousel-inner .item img {
-    max-width: 50%;
-  }
 }
 #myCarousel .carousel-caption {
   top: -20%;
@@ -7347,7 +7356,7 @@ body {
 @media (min-width: 992px) {
   #myCarousel .carousel-caption {
     top: 0;
-    left: 35%;
+    left: 0;
   }
 }
 @media (min-width: 1200px) {
